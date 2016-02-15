@@ -1,0 +1,4 @@
+settings.ini
+env
+*.pyc
+*.swp
