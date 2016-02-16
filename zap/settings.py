@@ -4,7 +4,6 @@ from dj_database_url import parse as db_url
 from unipath import Path
 
 BASE_DIR = Path(__file__).parent
-PROJECT_ROOT = Path(__file__)
 
 
 SECRET_KEY = config('SECRET_KEY')
@@ -89,7 +88,7 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    Path(PROJECT_ROOT, 'static'),
+    BASE_DIR.child('static'),
 ]
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
